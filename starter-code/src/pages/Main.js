@@ -1,12 +1,12 @@
-import React from 'react';
+import React from "react";
+import styles from "./main.module.css";
 
 const Main = () => {
-    return (
-    <>
-    <h1>Home Page</h1>
-    <img src='https://miro.medium.com/max/1400/0*R5pC0bAlYxH_nTlF.jpg' alt=''></img>
-    </>
-    );
+  return (
+    <div className={styles.main}>
+      <h1 className={styles.home}>Welcome to FinTrack</h1>
+    </div>
+  );
 };
 
 export default Main;

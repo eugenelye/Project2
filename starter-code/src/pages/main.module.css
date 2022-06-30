@@ -1,0 +1,13 @@
+.main {
+  background-image: url(./images/stock-market-data.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+.home {
+  color: aliceblue;
+  text-align: center;
+  padding: 200px 0 50px;
+}
