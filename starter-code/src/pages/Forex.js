@@ -37,7 +37,7 @@ const Forex = (props) => {
           >
             {d.name}
           </span>
-          <div style={{ fontSize: 22, fontWeight: 500 }}>US${d.price}</div>
+          <div style={{ fontSize: 22, fontWeight: 500 }}>{d.price}</div>
           <div style={{ color }}>{d.change}%</div>
 
           <button

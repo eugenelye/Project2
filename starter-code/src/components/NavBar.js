@@ -1,5 +1,5 @@
 import React from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styles from "./NavBar.module.css";
 
 const NavBar = () => {
@@ -62,17 +62,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-{
-  /* <ul>
-<li>
-    <NavLink to = '/page-one' activeClassName={styles.active}>Page One</NavLink>
-</li>
-<li>
-    <NavLink to= '/page-two' activeClassName={styles.active}>Page Two</NavLink>
-</li>
-<li>
-    <NavLink to= '/page-three' activeClassName={styles.active}>Page Three</NavLink>
-</li>
-</ul> */
-}
