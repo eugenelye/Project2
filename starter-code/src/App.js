@@ -12,7 +12,6 @@ function App() {
   const [stock, setStock] = useState([]);
   const [forex, setForex] = useState([]);
   const [crypto, setCrypto] = useState([]);
-  // const [error, setError] = useState(null);
   const [port, setPort] = useState([]);
 
   const addToFavourite = (item) => {
@@ -28,7 +27,7 @@ function App() {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
-          "X-API-KEY": "lanEkvG4jR39CDQEVHrZr4LZbI9CRwvu3i2cOHLU",
+          "X-API-KEY": "fiCTjWK43t2dhOnj6LtqKEqHeoHOpuY95xrp7iFg",
         },
       };
 

@@ -17,7 +17,7 @@ CSS was also used to create the background effects and beautify the data rendere
 ### Wireframes
 
 Pages such as Home, Stocks, Forex, Cryptocurrency and Portfolio are used to naviage around the app. The main App is used to filter the data and render the results to the respective pages. StockCarousel, ForexCarousel and CryptoCarousel are used to create the carousel effect on the pages. NavBar is the compoenent which directs the users to the respective pages with links.  
-![Wireframe](https://i.ibb.co/Cb3VJRc/Screenshot-2022-06-30-at-9-24-01-PM.png)
+![Wireframe](https://i.ibb.co/Bw0tVzx/Screenshot-2022-07-01-at-3-03-29-PM.png)
 
 ### User Stories
 
@@ -82,6 +82,8 @@ This page can be further improved by allowing users to input buy orders at the c
 
 TwelveData API (https://twelvedata.com/) - This API was used to retrieve the price by inputting the symbol. For the cryptocurrency app, the name and the symbol was both available in the API to display.
 Yahoo Finance API (https://yfapi.net) - This API was added for the stocks to be searched with either the name or symbol. The API was used as an autocomplete function hence it will filter out the closest matched stock data with your input. Thereafter, the symbol was retrieved from the data to input into the TwelveData API for data fetching.
+
+However, one thing to note is that the Yahoo Finance API key changes everyday. The key in the codes will need to be updated.
 
 ## Acknowledgments
 
