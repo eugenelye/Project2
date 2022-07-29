@@ -2,6 +2,8 @@
 
 This project is about creating a React App to search and track finance data such as Stocks, Forex and Cryptocurrency.
 
+eugenelye-stocktrack.netlify.app
+
 ## Description
 
 This project is about creating an app called "StockTrack". It allows users to find real time stock, forex and crypto data from an API called TwelveData and Yahoo Finance. It has a search function which allows users to input the stock name, forex pair and cryptocurrency symbol in their respective pages and retrieve the prices, exchange rate and the cryptocurrency prices in the searched currency. It also allows the user to add in their favourites to a portfolio so that they can track the prices of the searched items.
