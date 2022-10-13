@@ -115,7 +115,7 @@ function App() {
             }
           />
           <Route
-            path="/cryptocurrency"
+            path="/crypto"
             element={
               <Cryptocurrency
                 crypto={crypto}
