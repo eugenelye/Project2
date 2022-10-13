@@ -27,10 +27,20 @@ function App() {
       const res = await fetch(url);
       const data = await res.json();
       setStock((prevState) => {
-        return [...prevState, {name: data.meta.symbol, price: parseFloat(data.values[0].open).toFixed(2), change: parseFloat((data.values[0].open-data.values[1].open)/data.values[0].open*100).toFixed(2)}];
-    });
+        return [
+          ...prevState,
+          {
+            name: data.meta.symbol,
+            price: parseFloat(data.values[0].open).toFixed(2),
+            change: parseFloat(
+              ((data.values[0].open - data.values[1].open) /
+                data.values[0].open) *
+                100
+            ).toFixed(2),
+          },
+        ];
+      });
     }
-  
   };
 
   const handleForexSubmit = async (input) => {
@@ -89,7 +99,7 @@ function App() {
             element={
               <Stocks
                 stock={stock}
-                onClick={autoStockCompleteAPI}
+                onClick={handleStockSubmit}
                 handleClick={addToFavourite}
               />
             }
