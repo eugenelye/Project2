@@ -35,26 +35,6 @@ const NavBar = () => {
               Forex
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/Cryptocurrency"
-              activeClassName={(navData) =>
-                navData.isActive ? styles.active : ""
-              }
-            >
-              Cryptocurrency
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/Portfolio"
-              activeClassName={(navData) =>
-                navData.isActive ? styles.active : ""
-              }
-            >
-              My Portfolio
-            </NavLink>
-          </li>
         </ul>
       </nav>
     </header>
