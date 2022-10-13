@@ -20,49 +20,18 @@ function App() {
     });
   };
 
-  const autoStockCompleteAPI = async (input) => {
+
+  const handleStockSubmit = async (input) => {
     if (input) {
-      const url = `https://yfapi.net/v6/finance/autocomplete?region=US&lang=en&query=${input}`;
-      const config = {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          "X-API-KEY": "fiCTjWK43t2dhOnj6LtqKEqHeoHOpuY95xrp7iFg",
-        },
-      };
-
-      const response = await fetch(url, config);
-      const data = await response.json();
-      setStockInput(data.ResultSet.Result[0]);
-    }
-  };
-
-  const handleStockSubmit = async () => {
-    if (stockInput) {
-      const url = `https://api.twelvedata.com/time_series?apikey=b6ebfbfe83a1449cbeead2d97b8c2547&interval=1day&symbol=${stockInput.symbol}`;
+      const url = `https://api.twelvedata.com/time_series?apikey=b6ebfbfe83a1449cbeead2d97b8c2547&interval=1day&symbol=${input}`;
       const res = await fetch(url);
       const data = await res.json();
       setStock((prevState) => {
-        return [
-          ...prevState,
-          {
-            name: stockInput.name,
-            symbol: data.meta.symbol,
-            price: parseFloat(data.values[0].open).toFixed(2),
-            change: parseFloat(
-              ((data.values[0].open - data.values[1].open) /
-                data.values[0].open) *
-                100
-            ).toFixed(2),
-          },
-        ];
-      });
+        return [...prevState, {name: data.meta.symbol, price: parseFloat(data.values[0].open).toFixed(2), change: parseFloat((data.values[0].open-data.values[1].open)/data.values[0].open*100).toFixed(2)}];
+    });
     }
+  
   };
-
-  useEffect(() => {
-    handleStockSubmit();
-  }, [stockInput]);
 
   const handleForexSubmit = async (input) => {
     if (input) {
