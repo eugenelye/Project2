@@ -2,7 +2,7 @@
 
 This project is about creating a React App to search and track finance data such as Stocks, Forex and Cryptocurrency.
 
-[Click to browse!](stocktracking.netlify.app)
+[Click to browse!](https://stocktracking.netlify.app/)
 
 ## Description
 
